@@ -5,7 +5,7 @@ Type-safe API client for LaunchVerse API.
 ## Installation
 
 ```bash
-npm install github:kapish-webknot/launchverse-sdk@v1.0.5 openapi-fetch
+npm install github:kapish-webknot/launchverse-sdk@v1.0.6 openapi-fetch
 ```
 
 ## Usage
@@ -47,7 +47,7 @@ const { data: profile } = await client.GET('/v1/users/me');
 
 ## Version
 
-**Current Version:** v1.0.5
+**Current Version:** v1.0.6
 
 ## Changelog
 

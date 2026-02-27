@@ -1,6 +1,6 @@
 {
   "name": "@launchverse/sdk",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Type-safe SDK for LaunchVerse API",
   "main": "index.ts",
   "types": "index.ts",
