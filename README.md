@@ -5,13 +5,13 @@ Type-safe API client for LaunchVerse API.
 ## Installation
 
 ```bash
-npm install openapi-fetch
+npm install github:kapish-webknot/launchverse-sdk@v1.0.4 openapi-fetch
 ```
 
 ## Usage
 
 ```typescript
-import { createLaunchVerseClient } from './sdk';
+import { createLaunchVerseClient } from '@launchverse/sdk';
 
 const client = createLaunchVerseClient('http://localhost:3000');
 
@@ -34,26 +34,7 @@ const { data: loginData } = await client.POST('/v1/auth/login', {
 });
 
 // Get profile (authenticated)
-const { data: profile } = await client.GET('/v1/users/me', {
-  headers: {
-    Authorization: `Bearer ${accessToken}`,
-  },
-});
-
-// Forgot password
-await client.POST('/v1/auth/forgot-password', {
-  body: {
-    email: 'user@example.com',
-  },
-});
-
-// Reset password
-await client.POST('/v1/auth/reset-password', {
-  body: {
-    token: 'reset-token',
-    password: 'NewPass123!',
-  },
-});
+const { data: profile } = await client.GET('/v1/users/me');
 ```
 
 ## Features
@@ -61,11 +42,13 @@ await client.POST('/v1/auth/reset-password', {
 - ✅ Fully type-safe
 - ✅ Auto-completion for all endpoints
 - ✅ Request/response validation
-- ✅ Zero runtime overhead
+- ✅ Zero runtime overhead (2KB bundle)
 - ✅ Works with any HTTP client
 
-## Regenerate SDK
+## Version
 
-```bash
-npm run generate:sdk
-```
+**Current Version:** v1.0.4
+
+## Changelog
+
+See [GitHub Releases](https://github.com/kapish-webknot/launchverse-sdk/releases) for version history.
